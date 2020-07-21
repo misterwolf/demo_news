@@ -1,0 +1,18 @@
+# Mysql
+# NOTE:
+#   add your personal db user for using the db:
+
+#   $rake db:create
+#   or simply add new user&passoword configurations later after running the
+#   command
+development: &development
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: demo_news_dev
+  pool: 5
+  username: demo_news_user
+  password: password
+  socket: /tmp/mysql.sock
+
+# no other info
