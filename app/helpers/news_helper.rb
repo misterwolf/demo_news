@@ -1,9 +1,9 @@
 module NewsHelper
-  def user_is_owner
+  def user_is_owner # used in controller
     current_user && current_user == News.find_by(id: params[:id]).author
   end
 
-  def compare_current_user(user)
+  def compare_current_user(user = nil) # used in view
     current_user && current_user == user
   end
 

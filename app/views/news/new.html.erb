@@ -9,8 +9,6 @@
     <%= f.text_field :title, autofocus: true, placeholder:"Insert title here..." %><br /><br />
     <%= f.label :content  %><br />
     <%= f.text_area :content, size: "100x10", placeholder:"Insert content here..." %>
-    <div class="actions">
-      <%= f.submit "Create" %>
-    </div>
+    <%= f.submit "Create" %>
   <% end %>
 </div>

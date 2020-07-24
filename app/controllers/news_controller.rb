@@ -16,7 +16,7 @@ class NewsController < ApplicationController
     @news = News.all
   end
 
-  # added mainly to make a test and check other stuff.
+  # added mainly for curiosity and check other stuff, like scopes and the rest
   def search
     search = params[:search]
 

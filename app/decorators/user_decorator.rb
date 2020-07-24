@@ -2,12 +2,14 @@
 
 # UserDecorator
 # a simple decorator to facilitate User representation
-  class UserDecorator < SimpleDelegator
-    def full_name
-      "#{name} #{lastname}".strip
-    end
-
-    def joined_at
-      created_at.strftime('%B %Y')
-    end
+class UserDecorator < BaseDecorator
+  def full_name
+    "#{name} #{lastname}".strip
   end
+
+  def created(format = :numbers)
+    formatting = evaluate_format(format)
+
+    created_at.strftime(formatting)
+  end
+end

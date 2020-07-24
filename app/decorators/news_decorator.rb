@@ -2,7 +2,7 @@
 
 # NewsDecorator
 # a simple decorator to facilitate News representation
-class NewsDecorator < SimpleDelegator
+class NewsDecorator < BaseDecorator
   def created(format = :numbers)
     formatting = evaluate_format(format)
 
@@ -13,15 +13,5 @@ class NewsDecorator < SimpleDelegator
     formatting = evaluate_format(format)
 
     created_at.strftime(formatting)
-  end
-
-  private
-
-  def evaluate_format(format)
-    if format == :numbers
-      '%d-%m-%Y'
-    else
-      '%d %B %Y'
-    end
   end
 end

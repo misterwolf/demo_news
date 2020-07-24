@@ -3,11 +3,6 @@
 <hr>
 
 <div class="row new-list">
-  <%
-    news_decorator = ::NewsDecorator.new(@single_news)
-    user_decorated = ::UserDecorator.new(@single_news.author)
-  %>
-
   <div class="news-item col-lg">
     <%= form_for @single_news do |f| %>
       <%= f.label :title %><br />

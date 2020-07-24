@@ -35,7 +35,7 @@
 
     $('#filter-input').on('keyup', function() {
       var value = $(this).val().toLowerCase();
-      $('.news-item .essentials').filter(function() {
+      $('.news-item .main').filter(function() {
         // we want filter content in essential but hide the whole div
         $(this).parent().toggle($(this).text().toLowerCase().indexOf(value) > -1)
       });

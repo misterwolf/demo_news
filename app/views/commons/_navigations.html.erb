@@ -5,7 +5,7 @@
         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
 
         <% if user_signed_in? %>
-          <%# we can also think to let anonymous user to create a new and force them to signup later %>
+          <%# we can also think to let anonymous user to create a News and force them to signup later %>
           <%= link_to "Create a Single News", new_news_path, method: :get, class:"btn btn-default mb-2 lg:mr-2 lg:mb-0 block text-primary" %>
         <% end %>
 

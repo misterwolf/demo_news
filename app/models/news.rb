@@ -7,7 +7,7 @@ class News < ActiveRecord::Base
 
   validates :title, :content, presence: true
 
-  # Some useful scopes for the future.
+  # Some useful scopes. Future purpose
   scope :filter_by_title, ->(title) { where('title like ?', "%#{title}%") }
   scope :filter_by_content, ->(content) { where('content like ?', "%#{content}%") }
   scope :filter_by_author, lambda { |author, sort = 'asc'|
@@ -15,7 +15,7 @@ class News < ActiveRecord::Base
     order("created_at #{sort}")
   }
 
-  # for the future, search in one shot:
+  # Used in search in one shot:
   scope :filter_on_author_content_title, lambda { |field|
     joins(:author)
       .where(
