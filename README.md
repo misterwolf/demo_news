@@ -32,6 +32,10 @@ in mysql shell
 
 `mysql> GRANT ALL PRIVILEGES ON demo_news_test. * TO 'demo_news_user'@'localhost';`
 
+`mysql> exit;`
+
+In terminal, then:
+
 `$ rake db:migrate` # run migrations
 
 `$ rake db:seed` # fill a bit the database
