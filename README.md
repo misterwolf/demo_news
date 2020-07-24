@@ -46,7 +46,7 @@ Capybara, for curiosity purpose, use Firefox. Install it following these steps:
 
 ***note***: check your best build here: https://github.com/mozilla/geckodriver/releases)
 
-`tar -zxvf geckodriver-v0.24.0-linux64.tar.gz`
+`tar -zxvf geckodriver-v0.24.0-linux64.tar.gz` or file you just downloaded
 
 `sudo mv geckodriver /usr/local/bin/`
 
