@@ -12,10 +12,14 @@ Install RVM first!
 
 ### Setup database:
 
+**important notes**: version of mysql used is _Ver 14.14 Distrib 5.7.29_
+
+_if you want skip creating a new DB user with privileges, simply change the *config/database.yml* and add your personal configuration and then run_ 
+   - `$ rake db:create`
+
+otherwise:
+
 ***Set up a new DB user and gran privileges.***
-**important notes**:
- - if you want skip creating a new user, simply change the *config/database.yml* and add your personal configuration and then run `$ rake db:create`
- - my version of mysql used is _Ver 14.14 Distrib 5.7.29_
 
 In terminal:
 `$ mysql -uroot -pYOURPASSWORD`
