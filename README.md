@@ -42,19 +42,27 @@ in mysql shell
 
 Capybara, for curiosity purpose, use Firefox. Install it following these steps:
 
-`cd ~/Downloads/`
+`$ cd ~/Downloads/`
 
-`wget https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-macos.tar.gz`
+`$ wget https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-macos.tar.gz`
 
 ***note***: check your match build here: https://github.com/mozilla/geckodriver/releases
 
-`tar -zxvf geckodriver-v0.24.0-linux64.tar.gz` or file you just downloaded
+`$ tar -zxvf geckodriver-v0.24.0-linux64.tar.gz` or file you just downloaded
 
-`sudo mv geckodriver /usr/local/bin/`
+`$ mv geckodriver /usr/local/bin/`
 
 and finally
 
 `$ rspec spec/`
+
+## Run application
+
+`$ rails s -p 3000`
+
+open browser on localhost:3000 and enojy :)
+
+
 
 ## For the future
  Install
