@@ -14,3 +14,11 @@ News.destroy_all
 News.create!(author_id: user1.id, title: 'John', content: 'Someone who is not recognized', created_at: Time.now - 1.month, updated_at: Time.now  - 15.days)
 News.create!(author_id: user2.id, title: 'John', content: 'He remembers me a song', created_at: Time.now - 15.days, updated_at: Time.now  - 1.days)
 News.create!(author_id: user3.id, title: 'John', content: 'The leader of human resistance', created_at: Time.now, updated_at: Time.now)
+
+News.create!(author_id: user1.id, title: 'Francisco', content: 'Is is expensive due the Silicon Valley', created_at: Time.now - 1.month, updated_at: Time.now  - 15.days)
+News.create!(author_id: user2.id, title: 'Francisco', content: 'Closest to San Diego', created_at: Time.now - 15.days, updated_at: Time.now  - 1.days)
+News.create!(author_id: user3.id, title: 'Francisco', content: 'in California', created_at: Time.now, updated_at: Time.now)
+
+News.create!(author_id: user1.id, title: 'Karl', content: 'It could be philosopher', created_at: Time.now - 1.month, updated_at: Time.now  - 15.days)
+News.create!(author_id: user2.id, title: 'Karl', content: 'Pomerance, an American mathematician', created_at: Time.now - 15.days, updated_at: Time.now  - 1.days)
+News.create!(author_id: user3.id, title: 'Karl', content: 'Pulfrich, German physicist', created_at: Time.now, updated_at: Time.now)
