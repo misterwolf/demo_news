@@ -69,6 +69,14 @@ class NewsController < ApplicationController
 
   private
 
+  def user_is_owner
+    current_user && current_user == News.find_by(id: params[:id]).author
+  end
+
+  def require_permission
+    redirect_to root_path unless user_is_owner
+  end
+
   def find_news
     @single_news = News.find_by(id: params[:id])
   end

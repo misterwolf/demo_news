@@ -5,7 +5,7 @@ Implementare un’applicazione “News” like.
 L’applicazione dovrà permettere ad un utente di:
 - Vedere la lista degli articoli disponibili
 - Filtrare la lista per autore
-- Ordinare la lista per 
+- Ordinare la lista per
    - data creazione crescente / decrescente
    - data ultimo aggiornamento crescente / decrescente
 - Vedere il dettaglio di un singolo articolo
@@ -42,7 +42,7 @@ in your project folder:
 
 **important notes**: version of mysql used is _Ver 14.14 Distrib 5.7.29_
 
-_if you want skip the creation of a new DB-user (and privileges), add your personal configuration in *config/database.yml* and then run_ 
+_if you want skip the creation of a new DB-user (and privileges), add your personal configuration in *config/database.yml* and then run_
    - `$ rake db:create`
 
 Otherwise:
@@ -99,7 +99,7 @@ and finally
 
 open browser on localhost:3000 and enojy :)
 
-
+Note: in News#show delete and edit buttons will appear if page is opened by owner
 
 ## For the future
  Install
