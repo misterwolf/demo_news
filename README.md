@@ -1,5 +1,32 @@
 # demo_news
 
+Implementare un’applicazione “News” like.
+
+L’applicazione dovrà permettere ad un utente di:
+- Vedere la lista degli articoli disponibili
+- Filtrare la lista per autore
+- Ordinare la lista per 
+   - data creazione crescente / decrescente
+   - data ultimo aggiornamento crescente / decrescente
+- Vedere il dettaglio di un singolo articolo
+
+Inoltre un utente loggato potrà:
+   - Aggiungere un nuovo articolo
+   - Editare un suo articolo
+   - Eliminare un suo articolo permanentemente
+
+Un utente sarà definito dai campi: nome, cognome, email e password, tutti obbligatori
+
+Un articolo sarà definito dai campi: titolo, testo, autore, data creazione, data ultimo aggiornamento.
+
+Aggiungere nel codice applicativo un seed per la creazione automatica di 3 utenti e n articoli assegnati a questi autori a piacere.
+
+Si invita il candidato a:
+- Ignorare gli aspetti puramente estetici; si consiglia l’utilizzo di un framework come Bootstrap o Bulma per il raggiungimento di uno standard di utilizzo accettabile
+- Testare il codice utilizzando RSpec come ritenuto necessario
+- Fornire la documentazione necessaria per eseguire l’applicativo e i test
+
+
 ## Install project
 Install RVM first!
 
@@ -15,10 +42,10 @@ in your project folder:
 
 **important notes**: version of mysql used is _Ver 14.14 Distrib 5.7.29_
 
-_if you want skip creating a new DB user with privileges, add your personal configuration in *config/database.yml* and then run_ 
+_if you want skip the creation of a new DB-user (and privileges), add your personal configuration in *config/database.yml* and then run_ 
    - `$ rake db:create`
 
-otherwise:
+Otherwise:
 
 ***Set up a new DB user and gran privileges.***
 
@@ -43,7 +70,7 @@ In terminal, then:
 
 `$ rake db:migrate` # run migrations
 
-`$ rake db:seed` # fill a bit the database
+`$ rake db:seed` # fill the database with base data
 
 `$ rake db:schema:load RAILS_ENV=test` # set the test db
 
@@ -64,6 +91,7 @@ Capybara, for curiosity purpose, use Firefox. Install it following these steps:
 and finally
 
 `$ rspec spec/`
+(29 examples)
 
 ## Run application
 
