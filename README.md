@@ -8,12 +8,13 @@ Install RVM first!
 
 ### Run:
 `$ cd .. & cd .` # Make sure gemset is created/selected.
+
 `$ bundle install`
 
-## Setup database:
+### Setup database:
 
-### Set up a new DB user and gran privileges.
-**Notes**:
+***Set up a new DB user and gran privileges.***
+**important notes**:
  - if you want skip creating a new user, simply change the *config/database.yml* and add your personal configuration and then run `$ rake db:create`
  - my version of mysql used is _Ver 14.14 Distrib 5.7.29_
 
