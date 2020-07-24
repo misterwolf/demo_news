@@ -14,7 +14,7 @@ Install RVM first!
 
 **important notes**: version of mysql used is _Ver 14.14 Distrib 5.7.29_
 
-_if you want skip creating a new DB user with privileges, simply change the *config/database.yml* and add your personal configuration and then run_ 
+_if you want skip creating a new DB user with privileges, add your personal configuration in *config/database.yml* and then run_ 
    - `$ rake db:create`
 
 otherwise:
