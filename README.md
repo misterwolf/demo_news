@@ -1,12 +1,11 @@
 # demo_news
 
-## Download repository
-`$ git clone git@github.com:misterwolf/demo_news.git`
-
 ## Install project
 Install RVM first!
 
 ### Run:
+`$ git clone git@github.com:misterwolf/demo_news.git` # Download repository
+
 `$ cd .. & cd .` # Make sure gemset is created/selected.
 
 `$ bundle install`
