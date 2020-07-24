@@ -25,6 +25,7 @@ in mysql shell
 `mysql> create database demo_news_dev;`
 
 `mysql> create database demo_news_test;`
+
 `mysql> CREATE USER 'demo_news_user'@'localhost' IDENTIFIED BY 'password';`
 
 `mysql> GRANT ALL PRIVILEGES ON demo_news_dev. * TO 'demo_news_user'@'localhost';`
@@ -38,13 +39,14 @@ in mysql shell
 `$ rake db:schema:load RAILS_ENV=test` # set the test db
 
 ## Run tests
+
 Capybara, for curiosity purpose, use Firefox. Install it following these steps:
 
 `cd ~/Downloads/`
 
 `wget https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-macos.tar.gz`
 
-***note***: check your best build here: https://github.com/mozilla/geckodriver/releases)
+***note***: check your match build here: https://github.com/mozilla/geckodriver/releases
 
 `tar -zxvf geckodriver-v0.24.0-linux64.tar.gz` or file you just downloaded
 
