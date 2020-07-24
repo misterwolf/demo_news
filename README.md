@@ -77,4 +77,4 @@ open browser on localhost:3000 and enojy :)
  Install
   - deployment system, docker or Capisctrano
   - CircleCI installed to build spec in PR
-  - Others?
+  - Other cool stuff
