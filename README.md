@@ -56,6 +56,6 @@ and finally
 
 ## For the future
  Install
-  - deploy system, docker? Capisctrano?
+  - deployment system, docker or Capisctrano
   - CircleCI installed to build spec in PR
   - Others?
