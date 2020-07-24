@@ -4,9 +4,10 @@
 Install RVM first!
 
 ### Run:
+in your project folder:
 `$ git clone git@github.com:misterwolf/demo_news.git` # Download repository
 
-`$ cd .. & cd .` # Make sure gemset is created/selected.
+`$ cd demo_project` # Make sure gemset "demo_news" is created/selected.
 
 `$ bundle install`
 
