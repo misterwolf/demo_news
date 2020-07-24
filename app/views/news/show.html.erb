@@ -1,0 +1,32 @@
+<h1>Single News</h1>
+
+<hr>
+
+<div class="row new-list">
+  <%
+    news_decorator = ::NewsDecorator.new(@single_news)
+    user_decorated = ::UserDecorator.new(@single_news.author)
+  %>
+
+  <div class="news-item col-lg">
+      <h2><strong>Title: <%= @single_news.title %></strong></h2>
+      <span>Creator: <strong><%= user_decorated.full_name %></strong></span>
+      <br/>
+      <br/>
+      <br/>
+      <h3>Content:</h3>
+      <p><%= @single_news.content %></p>
+      <br/>
+      <br/>
+      <hr>
+
+      <p>
+        <small> Created at: </small> <small class="created"><%= news_decorator.created %></small>
+        <small> Updated at: </small> <small class="updated"><%= news_decorator.updated %></small>
+      </p>
+      <hr>
+
+      <%= link_to "Edit this News", edit_news_path(@single_news), method: :get, class:"btn btn-warning text-primary mb-5 lg:mr-2 lg:mb-0 block" if compare_current_user(@single_news.author) %>
+      <%= link_to "Delete this News", news_path(@single_news), method: :delete, class:"btn btn-danger mb-5 lg:mr-2 lg:mb-0 block" if compare_current_user(@single_news.author) %>
+    </div>
+</div>

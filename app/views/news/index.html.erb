@@ -1,0 +1,44 @@
+<h1>All News</h1>
+
+<div class="row">
+  <%= render "commons/searches" %>
+</div>
+
+<hr>
+
+<div class="row news-list">
+  <% @news.each do |n| %>
+
+    <%
+      news_decorator = ::NewsDecorator.new(n)
+      user_decorated = ::UserDecorator.new(n.author)
+    %>
+
+    <div class="news-item col-md-4">
+      <div class="essentials">
+        <h2><%= n.title %></h2>
+        <p><%= n.content %></p>
+
+        <span><%= user_decorated.full_name %></span>
+        <hr>
+
+        <% # TODO: Let's improve it %>
+        <% if compare_current_user(n.author) %>
+          <p><a class="btn btn-secondary" href="<%= edit_news_path(n.id)%>" role="button">Edit News &raquo;</a></p>
+        <% else %>
+          <p><a class="btn btn-secondary" href="<%= news_path(n.id)%>" role="button">View News details &raquo;</a></p>
+        <% end %>
+
+      </div>
+
+      <div class="dates">
+        <p>
+          <small>Created at: </small> <small class="created"><%= news_decorator.created %></small>
+        </p>
+        <p>
+          <small>Updated at: </small> <small class="updated"><%= news_decorator.updated %></small>
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>

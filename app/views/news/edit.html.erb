@@ -1,0 +1,19 @@
+<h1>Single News</h1>
+
+<hr>
+
+<div class="row new-list">
+  <%
+    news_decorator = ::NewsDecorator.new(@single_news)
+    user_decorated = ::UserDecorator.new(@single_news.author)
+  %>
+
+  <div class="news-item col-lg">
+    <%= form_for @single_news do |f| %>
+      <%= f.label :title %><br />
+      <%= f.text_field :title, autofocus: true, placeholder:"Insert title here..." %><br /><br />
+      <%= f.label :content  %><br />
+      <%= f.text_area :content, size: "100x10", placeholder:"Insert content here..." %>
+      <%= f.submit "Edit News" %>
+    <% end %>
+</div>

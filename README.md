@@ -13,9 +13,9 @@ Run:
 Setup database:
 
 Set up a new DB user and gran privileges.
-**Note**: if you want skip creating a new user, simply change the
-*config/database.yml* and add your personal configuration and then run
-`$ rake db:create`
+**Notes**:
+ - if you want skip creating a new user, simply change the *config/database.yml* and add your personal configuration and then run `$ rake db:create`
+ - my version of mysql used is _Ver 14.14 Distrib 5.7.29_
 
 In terminal:
 `$ mysql -uroot -pYOURPASSWORD`
@@ -23,8 +23,27 @@ In terminal:
 in mysql shell
 
 `mysql> create database demo_news_dev;`
+`mysql> create database demo_news_test;`
 `mysql> CREATE USER 'demo_news_user'@'localhost' IDENTIFIED BY 'password';`
 `mysql> GRANT ALL PRIVILEGES ON demo_news_dev. * TO 'demo_news_user'@'localhost';`
+`mysql> GRANT ALL PRIVILEGES ON demo_news_test. * TO 'demo_news_user'@'localhost';`
 
 `$ rake db:migrate` # run migrations
 `$ rake db:seed` # fill a bit the database
+`$ rake db:schema:load RAILS_ENV=test` # set the test db
+
+
+## Run tests
+cd ~/Downloads/
+wget https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-macos.tar.gz
+(check your best build here: https://github.com/mozilla/geckodriver/releases)
+tar -zxvf geckodriver-v0.24.0-linux64.tar.gz
+sudo mv geckodriver /usr/local/bin/
+
+`$ rspec spec/`
+
+## For the future
+ Install
+  - deploy system, docker? Capisctrano?
+  - CircleCI installed to build spec in PR
+  - Others?

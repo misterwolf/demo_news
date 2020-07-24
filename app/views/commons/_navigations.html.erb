@@ -1,0 +1,26 @@
+<nav class="navbar navbar navbar-expand-lg navbar-light bg-light bg-inverse">
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+
+        <% if user_signed_in? %>
+          <%# we can also think to let anonymous user to create a new and force them to signup later %>
+          <%= link_to "Create a Single News", new_news_path, method: :get, class:"btn btn-default mb-2 lg:mr-2 lg:mb-0 block text-primary" %>
+        <% end %>
+
+      </li>
+    </ul>
+
+    <div class="inline my-2 my-lg-0">
+      <% if user_signed_in? %>
+        <p class="lg:mr-2 px-4">Welcome, <%= current_user.email %></p>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"btn btn-default mb-2 lg:mr-2 lg:mb-0 block" %>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"btn btn-default mb-2 lg:mr-2 lg:mb-0 block" %>
+      <% else %>
+        <%= link_to "Login", new_user_session_path, class:"btn btn-default mb-2 lg:mr-2 lg:mb-0 block" %>
+        <%= link_to "Sign Up", new_user_registration_path, class:"btn btn-default mb-2 lg:mr-2 lg:mb-0 block" %>
+      <% end %>
+    </div>
+  </div>
+</nav>

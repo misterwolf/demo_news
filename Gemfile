@@ -37,8 +37,16 @@ gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  gem 'byebug' # we can need it during test :p
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'puma'
+  gem 'rails-controller-testing'
   gem 'rspec'
+  gem 'rspec-rails'
+  gem 'selenium-webdriver', '3.4.3'
+  gem 'shoulda-matchers'
 end
 
 group :development do

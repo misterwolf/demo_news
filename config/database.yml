@@ -15,4 +15,17 @@ development: &development
   password: password
   socket: /tmp/mysql.sock
 
+#   or simply add new user&passoword configurations later after running the
+#   command
+test:
+  adapter: mysql2
+  encoding: utf8
+  collation: utf8_bin
+  reconnect: false
+  database: demo_news_test
+  pool: 5
+  username: demo_news_user
+  password: password
+  socket: /tmp/mysql.sock
+
 # no other info

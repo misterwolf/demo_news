@@ -8,5 +8,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  validates :lastname, :name, presence: true
+  validates :email, uniqueness: true
+
   has_many :news, foreign_key: 'author_id'
 end

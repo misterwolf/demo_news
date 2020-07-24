@@ -1,0 +1,16 @@
+<h1>Create a News</h1>
+
+<hr>
+
+<div class="row new-list">
+  <% # TODO: let's make a common form %>
+  <%= form_for @single_news do |f| %>
+    <%= f.label :title %><br />
+    <%= f.text_field :title, autofocus: true, placeholder:"Insert title here..." %><br /><br />
+    <%= f.label :content  %><br />
+    <%= f.text_area :content, size: "100x10", placeholder:"Insert content here..." %>
+    <div class="actions">
+      <%= f.submit "Create" %>
+    </div>
+  <% end %>
+</div>
